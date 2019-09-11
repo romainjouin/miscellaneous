@@ -24,6 +24,6 @@ def push(message):
         cmd = cmd.split()
         if "commit" in cmd: 
             cmd.append( f"'{message}'") 
-        print(" ".join(cmd))
+        print(" ".join(cmd)) # let user know what is on-going
         subprocess.check_output(cmd)
         
