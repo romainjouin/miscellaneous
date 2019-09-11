@@ -1,6 +1,6 @@
 def push(message):
     """
-    Save current notebook and push whole current dir to origin/master
+    Save current notebook and push whole current dir to origin/master (use it in notebooks)
     
     Param:
         message : commit's message
@@ -18,6 +18,8 @@ def push(message):
     
     # save current notebook
     display(Javascript('IPython.notebook.save_checkpoint();'))
+    
+    # Apply the git commands:
     for cmd in cmds:
         cmd = cmd.split()
         if "commit" in cmd: 
